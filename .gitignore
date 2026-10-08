@@ -1,0 +1,19 @@
+# Root .gitignore — TripWise-AI
+
+# IDE / Editor
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.DS_Store
+
+# OS artifacts
+Thumbs.db
+
+# Secrets — never commit
+*.env
+*.env.local
+.env
+.env.local
+.env.*.local

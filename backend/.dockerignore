@@ -1,0 +1,9 @@
+target/
+.mvn/
+*.cmd
+*.bat
+.git
+.gitignore
+.idea
+*.iml
+src/main/resources/application-local.properties

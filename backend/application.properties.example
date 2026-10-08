@@ -1,0 +1,32 @@
+# TripWise AI — Backend Production Environment Variables Example
+# Set these environment variables in your deployment dashboard (e.g. Render, Railway, AWS, Heroku).
+# NEVER commit real production secrets to Git.
+
+# Server Port (assigned automatically by hosting platforms like Render)
+PORT=8080
+
+# Active Spring Profile (set to prod for production)
+SPRING_PROFILES_ACTIVE=prod
+
+# Database Connection (Neon PostgreSQL or any cloud PostgreSQL)
+TRIPWISE_DB_URL=jdbc:postgresql://your-neon-db-hostname:5432/your_db_name?sslmode=require
+TRIPWISE_DB_USERNAME=your_db_username
+TRIPWISE_DB_PASSWORD=your_db_password
+
+# DDL Auto mode for Hibernate (recommended 'update' or 'validate' in production)
+SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+# JWT Secret — Base64-encoded secret key for signing JWT tokens (min 256-bit)
+TRIPWISE_JWT_SECRET=your_base64_encoded_jwt_secret_here
+
+# JWT Expiration in milliseconds (default: 86400000 = 24 hours)
+TRIPWISE_JWT_EXPIRATION_MS=86400000
+
+# OpenRouter AI API Key — get yours at https://openrouter.ai/keys
+TRIPWISE_OPENROUTER_API_KEY=your_openrouter_api_key_here
+
+# AI Model (default: openrouter/free)
+TRIPWISE_AI_MODEL=openrouter/free
+
+# CORS Allowed Origins — comma-separated URLs of deployed frontend application(s)
+TRIPWISE_ALLOWED_ORIGINS=https://your-app.vercel.app,http://localhost:5173
